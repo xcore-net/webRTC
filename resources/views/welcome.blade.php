@@ -165,7 +165,20 @@
                         @csrf
                         <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Dispatch Job</button>
                     </form>
-
+                    
+                    <form method="GET" action="collection">
+                        @csrf
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Collection page</button>
+                    </form>
+                    <div>
+                        {{ __('welcome.welcome') }}
+                    </div>
+                    <button onclick="window.location.href = '{{ route('translate') }}'" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                        Translate English
+                    </button>
+                    <button onclick="window.location.href = '{{ route('translateA') }}'" class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
+                        Translate Aribic
+                    </button>
                     <footer class="py-16 text-center text-sm text-black dark:text-white/70">
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </footer>
